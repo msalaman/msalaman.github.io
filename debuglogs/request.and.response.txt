@@ -1,0 +1,23 @@
+Request:
+POST /ContosoFinancial/newThread.action HTTP/1.1
+Host: localhost:8080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 31
+Cookie: admin_auth=e54e6160-3ef2-4e1f-b241-d387cb2bac7a; JSESSIONID=FA6FDFB24656C76DB4C1990EA22D400B
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+name=Trying to hire a developer
+
+
+Response:
+HTTP/1.1 302 Found
+Location: /ContosoFinancial/errorAction.action?errorMsg=The+requested+resource+could+not+be+found.
+Content-Length: 0
+Date: Wed, 18 Apr 2018 20:15:48 GMT
+Connection: close
+Server: Fjord-Engineering-v2.4
+

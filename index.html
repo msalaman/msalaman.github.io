@@ -4,29 +4,65 @@
 	<title>Marcos Salamanca</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+			$(document).ready(function(){
+			  // Add smooth scrolling to all links
+			  $("a").on('click', function(event) {
+			
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+				  // Prevent default anchor click behavior
+				  event.preventDefault();
+			
+				  // Store hash
+				  var hash = this.hash;
+			
+				  // Using jQuery's animate() method to add smooth page scroll
+				  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 800, function(){
+			   
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				  });
+				} // End if
+			  });
+			});
+	</script>
 	<style>
 	body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
 	  }
-	 p {font-size: 16px;}
+	 p {font-size: 16px;
+	 	margin-right: 20px;
+		 }
+	 a.anchor {
+		display: block;
+		position: relative;
+		top: -70px;
+		visibility: hidden;
+	}
 	.margin {margin-bottom: 20px;}
 	.bg-1 { 
-		  background-color: #1abc9c; /* Green */
-		  color: #ffffff;
+		  background-color: rgb(210, 228, 217); /* Green */
+		  color: #555555;
 	 }
 	.bg-2 { 
-		  background-color: #474e5d; /* Dark Blue */
-		  color: #ffffff;
+		  background-color: rgb(154, 199, 197); /* Green Blue */
+		  color: #555555;
 	 }
 	.bg-3 { 
 		  background-color: #ffffff; /* White */
 		  color: #555555;
 	 }
 	.bg-4 { 
-		  background-color: #2f2f2f; /* Black Gray */
-		  color: #fff;
+		  background-color: #EAE7DC; /* Tan Green */
+		  color: #555555;
 	 }
 	.container-fluid {
 		  padding-top: 10px;
@@ -40,6 +76,8 @@
       margin-bottom: 0;
       font-size: 12px;
       letter-spacing: 5px;
+	  position: fixed;
+	  width: 100%;
 	}
 	.navbar-nav  li a:hover {
       color: #1abc9c !important;
@@ -47,9 +85,9 @@
   </style>
 
 </head>
-<body>
-<!Navbar>
-	<nav class="navbar navbar-default">
+<body style="padding-top: 70px">
+<!--Navbar-->
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -57,23 +95,24 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="#">Marcos Salamanca</a>
+				<a class="navbar-brand" href="#homeSection">Marcos Salamanca</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#courseload">Courseload</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#work">Work Experience</a></li>
+					<li><a href="#workSection">Experience</a></li>
+					<li><a href="#projectsSection">Projects</a></li>
+					<li><a href="#courseloadSection">Courseload</a></li>
 				  </ul>
 			</div>
 	  </div>
 	</nav>
-	<div class="container-fluid bg-3 text-center">    
+	<a class="anchor" id="homeSection"></a>
+	<div class="container-fluid bg-3 text-center" id="home">    
 	  <h2 class="margin">Greetings!</h2>
 	  <div class="row">
 		<div class="col-sm-4">
 		  <img src="france.jpg"  class="center-block" style="width:75%" alt="Image"><br/>
-		  <button style="font-size:24px"><a href="https://www.linkedin.com/in/marcos-salamanca-903042145/" target="_blank"><i class="fa fa-linkedin-square"></i> Profile</a></button>
+		  <button style="font-size:16px"><a href="https://www.linkedin.com/in/marcos-salamanca-903042145/" target="_blank"><i class="fa fa-linkedin-square"></i> Profile</a></button>
 		</div>
 		<div class="col-med-4 text-left">
 		  <p>
@@ -81,129 +120,85 @@
 			fascinated by how computers could help people be so much more efficient. That fascination turned into curiosity and soon 
 			enough, I became determined to immerse myself in the world of computers to have a better understanding of how it all works. 
 			Through taking on my course load, teaching teenagers how to program, and interning at both a startup and a large corporation, I feel that I have 
-			grown substantially in that understanding. Now as I embark on my final year of studies, I am searching for opportunities to begin my full-time career in technology. Overall, my goal has has always been to apply my skills and knowledge to the real world to help make the 
+			grown substantially in that understanding. Now as I embark on my final year of studies, I am searching for opportunities to begin my full-time career in technology. 
+			Overall, my goal has has always been to apply my skills and knowledge to the real world to help make the 
 			lives of others easier. I want to contribute to a future that will fascinate the next generation. I know the journey has 
 			still just begun and it calls for a lot of hard work and perseverance, but it is the journey of my dreams.
 		  </p>
 		    <br />
 			<br />
-			
-			<i>"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning
-			to do" - Pele</i>
-		  </p>
+		<p>
+			<i><b>"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning
+			to do" - Pele</b></i>
+		</p>
 		</div>
 	  </div>
 	</div>
-	<!-- Second Container -->
-	<div class="container-fluid bg-2 text-center" id="courseload">
-	  <h2 class="margin">Relevant Courseload</h2>
-	  <p>Here are a list of the relevant courses I have completed at the University of Notre Dame</p>
-	  <div class="col-sm-4">
-		  <h3 align="center">Fall 2018 - Spring 2019</h3>
-		  <ul style="list-style-type:none; padding:0; margin:0" align="center">
-			<li>Database Concepts</li>
-			<li>Programming Paradigms</li>
-			<li>Computer Architecture</li>
-			<li>Programming Challenges</li>
-			<li>Integrated Engineering and Business Fundamentals</li>
-			<li>Theory of Computing</li>
-			<li>Operating System Principles</li>
-			<li>Tech & Innovation Ethics</li>
-		  </ul>
-	  </div>
-	  <div class="col-sm-4">
-		  <h3 align="center">Fall 2017 - Spring 2018</h3>
-		  <ul style="list-style-type:none; padding:0; margin:0" align="center">
-			<li>Data Structures</li>
-			<li>Systems Programming</li>
-			<li>Logic Design</li>
-			<li>Fundamentals of Computing</li>
-			<li>Discrete Mathematics</li>
-			<li>Probability and Statistics</li>
-		  </ul>
-	  </div>
-	  <div class="col-sm-4">
-		  <h3 align="center">Fall 2016 - Spring 2017</h3>
-		  <ul style="list-style-type:none; padding:0; margin:0" align="center">
-			<li>Intro to Engineering Systems I</li>
-			<li>Intro to Engineering Systems II</li>
-			<li>Calculus III</li>
-			<li>Intro to Linear Algebra & Differential Equations</li>
-			<li>Introduction to Philosophy</li>
-		  </ul>
-		</div>
-	
-	</div>
-	<!-- Projects -->
-	<div class="container-fluid bg-1 text-center" id="projects">
-	  <h2 class="margin">Projects</h2>
-	  <h3>Data Structure Twitter API Project</h3>
-	  <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/JtmQEJh5yks" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	  <iframe align="center" src="https://docs.google.com/presentation/d/e/2PACX-1vSvMOSv_G5cs61QG9JFJrgGTk8xwgIDr--KHpfQO69EarGA1jB99NcdoCuBQ7mEzICU9GKnlG1c_jMR/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-	  <div><button align="center" style="font-size:16px"><a href="https://github.com/msalaman/DS-2018-FinalProject" target="_blank">Link to Project Repository</a></button></div>
-	  <h3>Engineering GE Project</h3>
-	  <video width="320" height="240" controls>
-		<source src="EngFinalVideo.mp4" type="video/mp4">
-	  Your browser does not support the video tag.
-	  </video>
-	  <h3>Math Gym</h3>
-	  <button style="font-size:16px"><a href="https://play.google.com/store/apps/details?id=com.math.marcos.myfirstapplication&hl=en_US" target="_blank">Link to App on Play Store</a></button>
-	  <br/>
-	  <h3>Student International Business Council Bosch Project</h3>
-	  <button style="font-size:16px"><a href="SIBCBoschPresentation.pptx" target="_blank">Download Presentation <i class="fa fa-file-powerpoint-o"></i></a></button>
-	  <br/>
-	  <h3>PacMan Project</h3>
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/hyIrUaXurUs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	  <br/>
-	  <h3>Basketball Scoreboard Project</h3>
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/_I4u9O0ZaTQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	  <h3>Marion Burk Knott Hall Website</h3>
-	  <button style="font-size:16px"><a href="http://sites.nd.edu/knotthall/" target="_blank">Link to Website</a></button>
-	  <p>
-	  I was given the position of Webmaster of my dorm, Marion Burk Knott Hall, in April of 2017. The dorm had websites already up,
-	  but the dorm presidents wanted the official website to have the ".nd.edu" to legitimaize it. After doing research on how to obtain 
-	  such a domain for our dorm, I learned that there were limited options as Notre Dame wanted to ensure that websites under there domain
-	  lived up to University Standards. For this reason, I created a new website using WordPress on Notre Dame's sites.nd.edu network.
-	  Residents were impressed with the site and it is now the second search on Google for "Knott Hall".
-	  </p>
-	  <h3>This Website!</h3>
-	  <p>
-	  I made this website using HTML and CSS. It is hosted on github pages. I used Bootstrap to incorporate some slick features.
-	  Making this website helped me practice HTML and CSS, which I learned in high school in my Web Technologies class but I hadn't
-	  really applied them ever since. This forced me to do some more research in web development to figure out how to make this
-	  site look exactly the way I wanted it. Overall, I enjoyed the experience as it helped me improve my web development
-	  skills and allowed me to express my creativity.
-	  </p>
-	</div>
+
+
 	<!--Work Experience-->
-	<h2 class="margin">Work Experience</h2>
+	
 
-
+	<a class="anchor" id="workSection"></a>
 	<div class="container-fluid bg-4 text-center" id="work">
+		<h2 class="margin">Work Experience</h2>
 		<br/>
 		<h4 align="left">Microsoft</h4>
 		<h5 align="left"><i>Software Engineering Intern</i><h5> 
 		<h6 align="left">June - August 2019</h6>
 		<br/>
+		<p>
+				I am working on the <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview" target="_blank">Azure Active Directory B2C</a> product team in Mircosoft's Identity Division. Currently I am developing a full stack QuickStart
+				feature, using C# and TypeScript, to increase the usability of the product's option to create custom policies. 
+		</p>
 
 		<br/>
 		<h4 align="left">X2AI</h4>
 		<h5 align="left"><i>Spring Tech Intern</i><h5> 
 		<h6 align="left">January - May 2019</h6>
 		<br/>
-
+		<p>
+				
+				X2AI is a startup in San Francisco that strives to provide affordable mental health care through chatbots that 
+				have helpful conversation abilities developed with the assistance of professional psychologists. Here I utilized Python and mySQL
+				to fix bugs and add features on the backend side of the platform. My biggest contribution was developing a groupchat feature
+				that allowed for a group of users to communicate with both each other and a chatbot. This was a great opportunity to 
+				better understand what working at a successful startup company is like. While working at a startup does require a lot of work, 
+				commitment, and uncertainty, there is great opportunity for impact. I also really enjoyed learning about mental health awareness from my
+				pyschologist coworkers and there is definitely some important life lessons that I am taking away from this opportunity. Here I had the
+				pleasure of working under <a href="https://www.linkedin.com/in/joey-trevino-5662971/" target="_blank">Joey Trevino</a>, who was the VP of Engineering at the "unicorn" startup Chime. Through him I learned
+				about good software engineering practices and how startups work in general.
+		</p>
 
 		<br/>
-		<h4 align="left">Department of Computer Science and Engineering</h4>
+		<h4 align="left">Notre Dame Department of Computer Science and Engineering</h4>
 		<h5 align="left"><i>Teaching Assistant</i><h5> 
 		<h6 align="left">August - December 2018</h6>
 		<br/>
+		<p>
+				My Fall semester of Junior year at Notre Dame I had the privilege of being a Teaching Assistant for professor Corey Pennycuff's 
+				C/C++ Programming course. This was a Computer Science introduction course for non Computer
+				Science students in the engineering department. My responsibilities were to hold office hours and grade course assigments. 
+				Personally I enjoyed helping my fellow students develop in their understanding of
+				content from my field of study. For many of my Computer Science classes I would receive a lot of help from office hours
+				when I would get stuck on a homework assignment. This was a great opportunity give such help to my fellow students and also to 
+				strengthen my understanding of the programming fundamentals. <a href="fa-cse20133-cse20232.pdf" target="_blank">Here</a> is a syllabus for the course if you're curious to learn more about what it covered.
+		</p>
 
 	  
-	  <h4 align="left">iD Tech Summer Camp</h4>
-	  <h5 align="left"><i>Lead Instructor</i><h5> 
-	  <h6 align="left">May - July 2018</h6>
-	  <h6 align="left">Courses taught (Click to view Course page)</h6>
+		<h4 align="left">iD Tech Summer Camp</h4>
+		<h5 align="left"><i>Lead Instructor</i><h5> 
+		<h6 align="left">May - July 2018</h6>
+		<p>
+				The Summer after my Sophomore year of college I got to teach computer programming lesson plans to adolescents at an ID Tech camp that
+				was being held at the University of Houston. This was another opportunity that strengthened my understanding of programming concepts while
+				also helping me practice my public speaking skills as I had to present lesson plans to a class full of students. This also helped me develop 
+				my leadership skills as I was second-in-command at this camp. It was a lot of responsibility but it was a really enjoyable job as while I was able
+				to improve my technical and behavioral skills, I got to introduce technology to the younger generation in a fun and friendly environment.
+				
+		</p>
+
+	  <h6 align="left">Here is a list of the courses I taught at the camp (Click to view Course page)</h6>
 	  <ul style="list-style-type:none" align="left">
 		<li><a href="CodeAppJava.pdf" target="_blank">Code Apps with Java</a></li>
 		<li><a href="JavaGames.pdf" target="_blank">Code and Develop Games with Java</a></li>
@@ -219,11 +214,166 @@
 	  <h4 align="left">Crcl Inc.</h4>
 	  <h5 align="left"><i>Product Development Team Member</i><h5> 
 	  <h6 align="left">August - December 2017</h6>
+	  <p>
+			Crcl Inc. was a small startup started by upperclassmen Notre Dame students that centered around a mobile app that combined
+			social media with consumer reviews. I used my knowledge of Android App development to fulfill frontend tasks for the app. The job 
+			included me attending weekly meetings with the Development Team and the CEO of the company. 		
+	  </p>
 	  <br/>
 	  <h4 align="left">St. Martin's Hospitality Center</h4>
 	  <h5 align="left"><i>Front Desk Clerk</i><h5> 
 	  <h6 align="left">June - August 2017</h6>
-	  
+	  <p>
+			The Summer after my Freshman year of college I did a Summer Service Learning Program at the St. Martin's Hospitality Center located in Albuquerque, New Mexico. There I
+			worked the frontcounter of the homeless day shelter where I would greet, check-in, and direct clients. This opportunity helped me develop
+			my interpersonal skills and taught me a lot about homelessness in the United States. One thing I really treasure about this experience was
+			learning the value of talking with and listening to others. 	
+	  </p>
+	</div>
+
+	<!-- Projects -->
+	<a class="anchor" id="projectsSection"></a>
+	<div class="container-fluid bg-1 text-center" id="projects">
+			<h2 class="margin">Projects</h2>
+			<br/>
+			<h3>CitiBike Web Service Project</h3>
+			<p>
+			For our Programming Paradigms final project, three classmates and I developed a RESTful JSON web service that would provide users information about CitiBike
+			stations (e.g. how many bikes are available, what is the closest station, etc) while also giving them the ability to edit certain information.
+			My role on the team focused on developing the Server, which was written in Python using CherryPy. Overall, working on this project was a good experience in working
+			with a team and demonstrating many of the concepts learned in this course. The project repository can be seen <a href="https://github.com/msalaman/citibikeproject" target="_blank">here</a>.
+			</p>
+			<br/>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YWt_EgWPNGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br/>
+			<br/>
+			<h3>Databases Food Ordering App</h3>
+			<p>
+			For our Database Concepts final project, three classmates and I developed a web application in PHP that would work as an ordering platform for the food sale businesses
+			that ran in our dormitory. Our application would save user orders in a mySQL database and then make such orders visible to the food sale businesses. The application
+			would also make use of past order information to recommend favorite items to users. For this team, my focus was on writing the PHP and figuring out the SQL queries 
+			necessary to make this functionality possible. Working on this project provided me a great introduction to SQL and PHP.
+			</p>
+			<br/>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/o1KrduUn-Mw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br/>
+			<br/>
+			<h3>Student International Business Council Microsoft Project</h3>
+			<p>
+			My SIBC group was tasked with presenting ideas for how Microsoft could best serve the deskless worker market. Through much research and discussion, our team believed that 
+			the best approach for Microsoft would be to use Augmented Reality to serve the manufacturing industry and IoT integration to serve the healthcare industry. My contributinos focused on
+			the Augmented Reality portion of presentation which entailed much research on the HoloLens product and the trends of the manufacturing industry. After months of preparation, my team presented
+			our solution to a group of Microsoft employees in Redmond, Washington. It was a great opportunity for me to practice my research, teamwork, and public speaking skills. 
+			You can see our presentation <a href="SIBCMicrosoftPresentation.pdf" target="_blank">here</a>.
+			</p>
+			<br/>
+
+			<br/>
+			<h3>Data Structure Twitter API Project</h3>
+			<p>
+			For our Data Structure Final Project, two classmates and I developed a Python program that would find relevant, connected Twitter accounts for a particular Twitter user. A 
+			custom formula was used to determine each Twitter account's value to the user and the accounts were organized using a Max Heap. Working on this project helped me learn how to work
+			with Twitter's API and how to apply some Data Structure concepts to real world applications. The project repository can be seen <a href="https://github.com/msalaman/DS-2018-FinalProject" target="_blank">here</a>.
+			</p>
+			<br/>
+			<iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/JtmQEJh5yks" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<br/>
+			<iframe align="center" width="560" height="315" src="https://docs.google.com/presentation/d/e/2PACX-1vSvMOSv_G5cs61QG9JFJrgGTk8xwgIDr--KHpfQO69EarGA1jB99NcdoCuBQ7mEzICU9GKnlG1c_jMR/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			<br/>
+			<br/>
+			<h3>Student International Business Council Bosch Project</h3>
+			<p>
+			My SIBC group was tasked with providing recommendations for Bosch as they are undergoing a digital transformation. Our research led us to believe that Bosch should perform horizontal digital integration, do a 
+			combination of insourcing and creating alliances during this transformation, and invest innovation centers. My focus was on the innovation center recommendation so I did a case study
+			on how Walmart successfully invested in startups to help their E-commerce division. Our team was able to present our recommendations to a group of Bosch executives in Chicago. I really enjoyed this experience
+			and valued being able to practice my research and presentation skills. Our presenation can be seen <a href="SIBCBoschPresentation.pdf" target="_blank">here</a>.
+			</p>
+			<br/>
+			<br/>
+			<h3>Engineering GE Project</h3>
+			<p>
+			For our Intro to Engineering Final Project, four classmates and I developed a MATLAB program that predicted the bulb color of a GE light bulb based on the resistances
+			that were set for the bulb. This was a great opportunity to practice teamwork with a group of fellow engineers.
+			</p>
+			<video width="560" height="315" controls>
+				<source src="EngFinalVideo.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+			<br/>
+			<br/>
+			<h3>Math Gym</h3>
+			<p>
+			Senior year of High School I developed an Android mobile application for my Independent Study Mentorship class. "Math Gym" serves to encourage users to practice their mental
+			math skills which is healthy for the human brain. Working on this app was my introduction to both Java and XML. This was my first big technology project and it helped confirm my
+			desire to study Computer Science in college. The app is currently availble on the <a href="https://play.google.com/store/apps/details?id=com.math.marcos.myfirstapplication&hl=en_US" target="_blank">Google Play Store</a>.
+			</p>
+			<br/>
+			<br/>
+			<h3>PacMan Project</h3>
+			<p>
+			For our Logic Design final project, a classamte and I developed a PacMan game using Verilog.
+			</p>
+			<br/>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/hyIrUaXurUs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<br/>
+			<h3>Basketball Scoreboard Project</h3>
+			<p>
+			For our Logic Design midterm project, a classamte and I developed a scoreboard using Verilog.
+			</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/_I4u9O0ZaTQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<br/>
+			<br/>
+			<h3>This Website!</h3>
+			<p>
+			I made this website using HTML and CSS. It is hosted on github pages. I used Bootstrap to incorporate some slick features.
+			Making this website helped me practice HTML and CSS, which I learned in high school in my Web Technologies class but I hadn't
+			really applied them ever since. This forced me to do some more research in web development to figure out how to make this
+			site look exactly the way I wanted it. Overall, I enjoyed the experience as it helped me improve my web development
+			skills and allowed me to express my creativity.
+			</p>
+	</div>
+
+	<!-- Courseload -->
+	<a class="anchor" id="courseloadSection"></a>
+	<div class="container-fluid bg-2 text-center" id="courseload">
+			<h2 class="margin">Relevant Courseload</h2>
+			<p>Here are a list of the relevant courses I have completed at the University of Notre Dame</p>
+			<div class="col-sm-4">
+				<h3 align="center">Fall 2018 - Spring 2019</h3>
+				<ul style="list-style-type:none; padding:0; margin:0" align="center">
+					<li>Database Concepts</li>
+					<li>Programming Paradigms</li>
+					<li>Computer Architecture</li>
+					<li>Programming Challenges</li>
+					<li>Integrated Engineering and Business Fundamentals</li>
+					<li>Theory of Computing</li>
+					<li>Operating System Principles</li>
+					<li>Tech & Innovation Ethics</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h3 align="center">Fall 2017 - Spring 2018</h3>
+				<ul style="list-style-type:none; padding:0; margin:0" align="center">
+					<li>Data Structures</li>
+					<li>Systems Programming</li>
+					<li>Logic Design</li>
+					<li>Fundamentals of Computing</li>
+					<li>Discrete Mathematics</li>
+					<li>Probability and Statistics</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h3 align="center">Fall 2016 - Spring 2017</h3>
+				<ul style="list-style-type:none; padding:0; margin:0" align="center">
+					<li>Intro to Engineering Systems I</li>
+					<li>Intro to Engineering Systems II</li>
+					<li>Calculus III</li>
+					<li>Intro to Linear Algebra & Differential Equations</li>
+					<li>Introduction to Philosophy</li>
+				</ul>
+				</div>
+			
+			</div>
 
 
 </body>
